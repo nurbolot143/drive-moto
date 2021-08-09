@@ -1,0 +1,66 @@
+@import "../vars";
+
+.header {
+  padding-top: 25px;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-right {
+      display: flex;
+      justify-content: space-between;
+      width: 440px;
+      align-items: center;
+    }
+  }
+  &-address {
+    padding-left: 35px;
+    padding-top: 15px;
+    margin-top: -15px;
+    background: url(../../images/header/address.svg) no-repeat;
+    background-position: 0 10px;
+  }
+
+  &-bottom {
+    margin-top: 20px;
+    background-color: $base;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+      position: relative;
+    }
+
+    &-link {
+      display: block;
+      padding: 15px 0;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      text-transform: capitalize;
+      color: $dark;
+      transition: 0.3s;
+    }
+    &-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      background-color: $accent-color;
+      transition: 0.5s;
+    }
+    &-link:hover::after {
+      width: 100%;
+    }
+  }
+  .active {
+    font-weight: 700;
+    border-bottom: 3px solid $accent-color;
+  }
+}

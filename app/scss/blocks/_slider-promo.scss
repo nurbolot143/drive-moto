@@ -1,0 +1,81 @@
+@import "../vars";
+
+.slider-promo {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 77px 0;
+    padding: 0;
+  }
+
+  .slider-wrapper {
+    position: relative;
+    width: 870px;
+    height: 400px;
+  }
+
+  .slider {
+    img {
+      width: 100%;
+    }
+    &-inner {
+      position: relative;
+      z-index: -1;
+    }
+    &-item {
+      &-title {
+        position: absolute;
+        font-family: $accent-font;
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        top: 0;
+        margin-left: 50%;
+        padding: 35px 100px 0 0;
+        color: $dark;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      bottom: 50%;
+      width: 16px;
+      height: 30px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      margin-bottom: -15px;
+      z-index: 1;
+      background: url(../../images/slider-promo/slider-arrow.svg) no-repeat;
+    }
+    &-prev {
+      left: 25px;
+    }
+    &-next {
+      right: 25px;
+      transform: rotate(180deg);
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+  .slick-dots button {
+    font-size: 0;
+    border: 1px solid $light;
+    border-radius: 50%;
+    height: 13px;
+    background-color: transparent;
+    margin-right: 9px;
+    cursor: pointer;
+  }
+
+  .slick-active button {
+    background-color: $light;
+  }
+}

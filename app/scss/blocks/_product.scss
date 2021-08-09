@@ -1,0 +1,214 @@
+@import "../vars";
+
+.product {
+  margin: 80px 0;
+
+  &-tabs {
+    margin: 30px 0;
+
+    .active {
+      border-bottom: 3px solid $accent-color;
+    }
+  }
+
+  &-tab {
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: $dark;
+    margin: 0 25px;
+    padding-bottom: 10px;
+    transition: 0.5s;
+  }
+
+  &-tab::after {
+    content: "";
+    position: absolute;
+    margin-bottom: -3px;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: $accent-color;
+    transition: 0.5s;
+  }
+  &-tab:hover::after {
+    width: 100%;
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-slider {
+    margin-left: 20px;
+    height: 403px;
+    margin-bottom: 35px;
+  }
+
+  &-wrapper {
+    position: relative;
+    visibility: hidden;
+  }
+
+  .active-tab {
+    visibility: visible;
+  }
+
+  &-promo {
+    position: relative;
+    display: grid;
+    grid-template: 1fr 4fr 1fr 1fr;
+    height: 403px;
+    width: 271px;
+    &-top {
+      justify-content: flex-end;
+    }
+  }
+
+  &-like {
+    content: "";
+    width: 24px;
+    height: 22px;
+    right: 0 !important;
+    border: none;
+    background: url("../../images/product/like.svg") no-repeat;
+    transform: translateY(18px) translateX(-16px);
+    cursor: pointer;
+  }
+  .show {
+    background: url("../../images/product/Likee.svg") no-repeat;
+    transform: translateY(18px) translateX(-16px);
+  }
+
+  &-image {
+    margin: 0 auto;
+    &-link {
+      visibility: hidden;
+      position: absolute;
+      left: 33px;
+      top: 120px;
+      padding: 18px 22px;
+      background: $light;
+      opacity: 0.8;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: $dark;
+    }
+  }
+  &-promo:hover .product-image-link {
+    visibility: visible;
+  }
+
+  &-price {
+    font-family: $accent-font;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: $dark;
+    transform: translateY(30px);
+    transition: 0.5s;
+  }
+
+  &-promo:hover .product-item-title {
+    color: $accent-color;
+  }
+  &-promo:hover .product-price {
+    color: $accent-color;
+  }
+  &-promo:hover {
+    border: none;
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  }
+  &-item {
+    width: 271px;
+    &-title {
+      font-weight: 400;
+      transform: translateY(20px);
+    }
+  }
+
+  &-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &-link {
+    position: relative;
+    width: 60px;
+    height: 40px;
+    border: 2px solid $accent-color;
+    border-radius: 10px 0 3px 0;
+    background: url(../../images/product/basket.svg) no-repeat $accent-color;
+    background-position: 14px 7px;
+    transition: 0.5s;
+    z-index: 1;
+    span {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      border-radius: 8px 0 2px 0;
+      background: url("../../images/product/basket-hover.svg") no-repeat $light;
+      background-position: 14px 7px;
+      transition: 0.5s;
+      overflow: hidden;
+      z-index: -1;
+    }
+  }
+  &-link:hover span {
+    width: 100%;
+  }
+
+  .not-availabel {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: $dark;
+  }
+  .inform-link {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $accent-color;
+    text-decoration: underline;
+  }
+
+  &-btns {
+    position: absolute;
+    width: 870px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-btn {
+    position: absolute;
+    width: 16px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+    background: url(../../images/product/arrow.svg) no-repeat;
+  }
+  &-prev {
+    margin-top: 185px;
+    left: -40px;
+  }
+  &-next {
+    right: -20px;
+    margin-top: -215px;
+    transform: rotate(180deg);
+  }
+}

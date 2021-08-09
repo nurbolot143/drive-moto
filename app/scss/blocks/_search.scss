@@ -1,0 +1,81 @@
+@import "../vars";
+
+.search {
+  &-btns {
+    margin-bottom: 25px;
+  }
+
+  &-btn {
+    position: relative;
+    padding: 11px 25px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $dark;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+    span {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      border-radius: 5px;
+      background-color: $base;
+      transition: 0.6s;
+      overflow: hidden;
+      z-index: -1;
+    }
+  }
+
+  &-btn + &-btn {
+    margin-left: 10px;
+  }
+
+  &-btn:hover span {
+    width: 100%;
+  }
+
+  .active {
+    font-weight: 700;
+    background-color: $base;
+  }
+
+  &-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 160px;
+  }
+
+  &-form {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: $base;
+    border-radius: 3px;
+
+    &-input {
+      padding-left: 20px;
+      background: transparent;
+      border: none;
+      width: 100%;
+      margin-right: 5px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $dark;
+    }
+  }
+  .show {
+    visibility: visible;
+  }
+}

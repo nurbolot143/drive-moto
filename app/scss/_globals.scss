@@ -1,0 +1,65 @@
+@import "vars";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main-btn {
+  position: relative;
+  padding: 16px 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $light;
+  background-color: $accent-color;
+  border: 2px solid $accent-color;
+  border-radius: 3px;
+  transition: 0.6s;
+  z-index: 1;
+  cursor: pointer;
+  span {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 3px;
+    background-color: $light;
+    transition: 0.6s;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+.main-btn:hover {
+  color: $accent-color;
+}
+.main-btn:hover span {
+  width: 100%;
+}

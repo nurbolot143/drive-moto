@@ -1,0 +1,118 @@
+@import "../vars";
+
+.promo {
+  display: grid;
+  grid-template: 1fr 3fr 1fr 2fr;
+  width: 265px;
+  border: 1px solid $light-gray;
+  border-radius: 3px;
+  text-align: center;
+  transition: 0.5s;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-link {
+    position: relative;
+    height: 32px;
+    padding: 8px 20px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $light;
+    border: 2px solid $accent-color;
+    border-radius: 1px;
+    background-color: $accent-color;
+    transition: 0.6s;
+    z-index: 1;
+    span {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      background-color: $light;
+      transition: 0.5s;
+      overflow: hidden;
+      z-index: -1;
+    }
+  }
+  &-link:hover {
+    color: $accent-color;
+  }
+  &-link:hover span {
+    width: 100%;
+  }
+
+  &-price {
+    font-family: $accent-font;
+    padding: 3px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    &-new {
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 32px;
+      color: $accent-color;
+      margin-bottom: 7px;
+    }
+    &-old {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $light-gray;
+      position: relative;
+      span {
+        position: absolute;
+        width: 60px;
+        height: 10px;
+        bottom: 9px;
+        left: -5px;
+        border-bottom: 0.5px solid $light-gray;
+        transform: rotate(-13deg);
+      }
+    }
+  }
+
+  &-product {
+    &-image {
+      height: 177px;
+    }
+    &-title {
+      margin: 4px 0 7px 0;
+      padding: 0 40px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: $dark;
+      transition: 0.5s;
+    }
+  }
+
+  &-bottom {
+    background-color: $base;
+    height: 100px;
+    bottom: 0;
+    padding: 26px 40px 0 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $dark;
+
+    &-date {
+      font-family: $accent-font;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: $accent-color;
+    }
+  }
+}

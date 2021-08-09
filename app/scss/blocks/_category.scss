@@ -1,0 +1,69 @@
+@import "../vars";
+
+.category {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    display: block;
+    width: 370px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    transition: 0.6s;
+  }
+
+  &-item:hover {
+    border: none;
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+
+    .category-title {
+      color: $accent-color;
+    }
+  }
+
+  &-inner {
+    padding: 20px 0 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &-link {
+    padding-right: 17px;
+    font-weight: 4000;
+    font-size: 14px;
+    line-height: 17px;
+    color: $light-gray;
+    background: url("../../images/category/Arrow.svg") no-repeat;
+    background-position: 64px 50%;
+    transition: 0.4s;
+  }
+  &-link:hover {
+    color: $accent-color;
+    background-position: 65px;
+    background-size: 15px;
+  }
+
+  &-title {
+    margin: 0;
+    font-family: $accent-font;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    color: $dark;
+  }
+
+  &-image {
+    height: 80%;
+    width: auto;
+    margin: 0 auto;
+  }
+}

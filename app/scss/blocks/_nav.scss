@@ -1,0 +1,40 @@
+@import "../vars";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  &-link {
+    display: block;
+    padding: 7px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $dark;
+    position: relative;
+    transition: 0.3s;
+  }
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -3px;
+  background-color: $accent-color;
+  transition: 0.5s;
+}
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar {
+  width: 440px;
+}
+
+.nav-icon + .nav-icon {
+  margin-left: 10px;
+}

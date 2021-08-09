@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <nav class="navbar">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link navbar-link active" href="#">Магазины</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navbar-link" href="#">Акции</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navbar-link" href="#">Доставка и оплата</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="logo">
+            <a href="#" class="logo-link"
+              ><img src="images/header/logo.svg" alt="Logo"
+            /></a>
+          </div>
+          <div class="header-top-right">
+            <div class="header-address">
+              <address>
+                <a href="#" class="nav-link">Москва, ул. Науки 25 </a>
+              </address>
+            </div>
+            <ul class="nav nav-icons">
+              <li class="nav-item nav-icon">
+                <a href="" class="nav-link"
+                  ><img src="images/header/like.svg" alt=""
+                /></a>
+              </li>
+              <li class="nav-item nav-icon">
+                <a href="#" class="nav-link"
+                  ><img src="images/header/profile.svg" alt=""
+                /></a>
+              </li>
+              <li class="nav-item nav-icon">
+                <a href="#" class="nav-link"
+                  ><img src="images/header/purchase.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-bottom">
+          <ul class="header-menu">
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Квадроциклы</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Катера</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link active">Гидроциклы</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Лодки</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Вездеходы</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Снегоходы</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Двигатели</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Запчасти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="slider-promo">
+      <div class="container">
+        <div class="slider-promo-wrapper">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="slider-item">
+                  <img
+                    class="slider-item-image"
+                    src="images/slider-promo/slider1-image.jpg"
+                    alt=""
+                  />
+              </div>
+              <div class="slider-item">
+                  <img
+                    class="slider-item-image"
+                    src="images/slider-promo/slider1-image.jpg"
+                    alt=""
+                  />
+              </div>
+              <div class="slider-item">
+                  <img
+                    class="slider-item-image"
+                    src="images/slider-promo/slider1-image.jpg"
+                    alt=""
+                  />
+              </div>
+              <div class="slider-item">
+                  <img
+                    class="slider-item-image"
+                    src="images/slider-promo/slider1-image.jpg"
+                    alt=""
+                  />
+              </div>
+              <div class="slider-item">
+                  <img
+                    class="slider-item-image"
+                    src="images/slider-promo/slider1-image.jpg"
+                    alt=""
+                  />
+              </div>
+            </div>
+          </div>
+
+          <div class="promo">
+            <div class="promo-top">
+              <a href="#" class="promo-link">Акция <span></span></a>
+              <div class="promo-price">
+                <span class="promo-price-new">190 000 &#8381;</span>
+                <span class="promo-price-old"
+                  ><span></span> 225 000 &#8381;</span
+                >
+              </div>
+            </div>
+
+            <div class="promo-product">
+              <img
+                src="images/slider-promo/product-img.png"
+                alt="Product image"
+                class="promo-product-image"
+              />
+              <h4 class="promo-product-title">
+                Лодочный мотор Suzuki DF9.9BRS
+              </h4>
+            </div>
+            <div class="promo-bottom">
+              Акция действует до
+              <span class="promo-bottom-date">31.08.2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search">
+      <div class="container">
+        <div class="search-btns">
+          <a href="#tab1" class="search-btn">Поиск по номеру <span></span></a>
+          <a href="#tab2" class="search-btn active"
+            >Поиск по марке <span></span
+          ></a>
+          <a href="#tab3" class="search-btn"
+            >Поиск по названию товара <span></span
+          ></a>
+        </div>
+        <div class="search-box">
+          <form id="tab1" class="search-form">
+            <input
+              class="search-form-input"
+              type="tel"
+              name="tel"
+              placeholder="Введите номер"
+              required
+            />
+            <button class="main-btn">Искать <span></span></button>
+          </form>
+          <form id="tab2" class="search-form show">
+            <input
+              class="search-form-input"
+              type="text"
+              name="brand"
+              placeholder="Введите марку"
+              required
+            />
+            <button class="main-btn">Искать <span></span></button>
+          </form>
+          <form id="tab3" class="search-form">
+            <input
+              class="search-form-input"
+              type="tel"
+              name="name"
+              placeholder="Введите название товара"
+              required
+            />
+            <button class="main-btn">Искать <span></span></button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="container">
+        <div class="category-wrapper">
+          <a href="#" class="category-item">
+            <div class="category-inner">
+              <h3 class="category-title">Квадроциклы</h3>
+              <p class="category-link">Подробее</p>
+            </div>
+            <img
+              src="images/category/image1.jpg"
+              alt="image"
+              class="category-image"
+            />
+          </a>
+          <a href="#" class="category-item active">
+            <div class="category-inner">
+              <h3 class="category-title">Гидроциклы</h3>
+              <p href="#" class="category-link">Подробее</p>
+            </div>
+            <img
+              src="images/category/image2.jpg"
+              alt="image"
+              class="category-image"
+            />
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-inner">
+              <h3 class="category-title">Катера</h3>
+              <p href="#" class="category-link">Подробее</p>
+            </div>
+            <img
+              src="images/category/image3.jpg"
+              alt="image"
+              class="category-image"
+            />
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-inner">
+              <h3 class="category-title">Снегоходы</h3>
+              <p href="#" class="category-link">Подробее</p>
+            </div>
+            <img
+              src="images/category/image4.jpg"
+              alt="image"
+              class="category-image"
+            />
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-inner">
+              <h3 class="category-title">Вездеходы</h3>
+              <p href="#" class="category-link">Подробее</p>
+            </div>
+            <img
+              src="images/category/image5.jpg"
+              alt="image"
+              class="category-image"
+            />
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-inner">
+              <h3 class="category-title">Двигатели</h3>
+              <p href="#" class="category-link">Подробее</p>
+            </div>
+            <img
+              src="images/category/image6.jpg"
+              alt="image"
+              class="category-image"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="container">
+          <h2 class="product-title">Популярные товары</h2>
+          <div class="product-tabs">
+            <a href="#tab1" class="product-tab active">запчасти</a>
+            <a href="#tab2" class="product-tab">моторы</a>
+            <a href="#tab3" class="product-tab">шины </a>
+            <a href="#tab4" class="product-tab">электроника</a>
+            <a href="#tab5" class="product-tab">инструменты</a>
+            <a href="#tab6" class="product-tab">аксессуары </a>
+          </div>
+          <div id="tab1" class="product-slider">
+            <div class="product-item">
+              <div class="promo product-promo">
+                <div class="promo-top product-promo-top">
+                  <button class="product-like"></button>
+                </div>
+
+                <div class="promo-product">
+                  <img
+                    src="images/product/image1.jpg"
+                    alt="Product image"
+                    class="promo-product-image product-image"
+                  />
+                  <a href="#" class="product-image-link">посмотреть товар</a>
+                  <h4 class="promo-product-title product-item-title">
+                    Водонепроницаемый Рюкзак
+                  </h4>
+                </div>
+                <span class="product-price">9 800 &#8381;</span>
+                <div class="product-bottom">
+                  <a href="#" class="product-link"><span></span></a>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="promo product-promo">
+                <div class="promo-top">
+                  <a href="#" class="promo-link">SALE<span></span></a>
+                  <button class="product-like"></button>
+                </div>
+
+                <div class="promo-product">
+                  <img
+                    src="images/product/image2.jpg"
+                    alt="Product image"
+                    class="promo-product-image product-image"
+                  />
+                  <a href="#" class="product-image-link">посмотреть товар</a>
+                  <h4 class="promo-product-title product-item-title">
+                    Спасательный жилет BRP Men's Airflow PFD
+                  </h4>
+                </div>
+                <span class="product-price">6 900 &#8381;</span>
+                <div class="product-bottom">
+                  <a href="#" class="product-link"><span></span></a>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="promo product-promo">
+                <div class="promo-top product-promo-top">
+                  <button class="product-like"></button>
+                </div>
+
+                <div class="promo-product">
+                  <img
+                    src="images/product/image3.jpg"
+                    alt="Product image"
+                    class="promo-product-image product-image"
+                  />
+                  <a href="#" class="product-image-link">посмотреть товар</a>
+                  <h4 class="promo-product-title product-item-title">
+                    BRP Audio-Premium System
+                  </h4>
+                </div>
+                <span class="product-price">68 000 &#8381;</span>
+                <div class="product-bottom">
+                  <a href="#" class="product-link"><span></span></a>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="promo product-promo">
+                <div class="promo-top">
+                  <a href="#" class="promo-link">SALE<span></span></a>
+                  <button class="product-like"></button>
+                </div>
+
+                <div class="promo-product">
+                  <img
+                    src="images/product/image4.jpg"
+                    alt="Product image"
+                    class="promo-product-image product-image"
+                  />
+                  <a href="#" class="product-image-link">посмотреть товар</a>
+                  <h4 class="promo-product-title product-item-title">
+                    Спасательное снаряжение
+                  </h4>
+                </div>
+                <p class="not-availabel">нет в наличии</p>
+                <div class="product-bottom">
+                  <a href="#" class="inform-link">Сообщить о поступлении</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="promo product-promo">
+                <div class="promo-top product-promo-top">
+                  <button class="product-like"></button>
+                </div>
+
+                <div class="promo-product">
+                  <img
+                    src="images/product/image1.jpg"
+                    alt="Product image"
+                    class="promo-product-image product-image"
+                  />
+                  <a href="#" class="product-image-link">посмотреть товар</a>
+                  <h4 class="promo-product-title product-item-title">
+                    Водонепроницаемый Рюкзак
+                  </h4>
+                </div>
+                <span class="product-price">9 800 &#8381;</span>
+                <div class="product-bottom">
+                  <a href="#" class="product-link"><span></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
