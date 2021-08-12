@@ -1,0 +1,15 @@
+@import "../vars";
+
+.bread-crumbs {
+  &-list {
+    margin: 40px 0;
+    display: flex;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: $light-gray;
+  }
+  &-item + &-item {
+    margin-left: 10px;
+  }
+}
