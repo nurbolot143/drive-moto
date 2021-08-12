@@ -53,10 +53,18 @@ $(function () {
   $(".product-slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
     prevArrow: ' <button class="product-btn product-prev"></button>',
     nextArrow: '<button class="product-btn product-next"></button>',
   });
   //
+
+  //tabs
+  $(".product-tab").on("click", function (e) {
+    e.preventDefault();
+
+    $(".product-tab-wrapper").removeClass("active-tab");
+    $($(this).attr("href")).addClass("active-tab");
+  });
+
+  // function Tab(tab, element) {}
 });

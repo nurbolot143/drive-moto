@@ -36,24 +36,61 @@
   &-tab:hover::after {
     width: 100%;
   }
-
-  &-wrapper {
+  &-slider-container {
     position: relative;
+    height: 490px;
+    width: 100%;
+    text-align: center;
+  }
+  &-tab-wrapper {
+    visibility: hidden;
+    position: absolute;
+    width: 1170px;
+    height: 0;
   }
 
   &-slider {
     margin-left: 20px;
+    width: 1170px;
     height: 403px;
     margin-bottom: 35px;
+    &-button {
+      padding: 16px 43px;
+      position: relative;
+      border: none;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $dark;
+      background-color: $base;
+      cursor: pointer;
+      transition: 0.6s;
+      z-index: 1;
+      span {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $accent-color;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: -1;
+      }
+    }
   }
-
-  &-wrapper {
-    position: relative;
-    visibility: hidden;
+  .product-slider-button:hover {
+    color: $light;
   }
-
+  .product-slider-button:hover span {
+    width: 100%;
+  }
   .active-tab {
-    visibility: visible;
+    visibility: inherit;
   }
 
   &-promo {
