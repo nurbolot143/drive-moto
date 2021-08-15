@@ -17,20 +17,6 @@
   }
 }
 
-.navbar-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  left: 0;
-  bottom: -3px;
-  background-color: $accent-color;
-  transition: 0.5s;
-}
-.navbar-link:hover::after {
-  width: 100%;
-}
-
 .navbar {
   width: 440px;
 }

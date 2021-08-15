@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="css/jquery.formstyler.css" />
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css" />
+    <link rel="stylesheet" href="css/jquery.rateyo.min.css" />
     <link rel="stylesheet" href="css/main.min.css" />
     <title>Document</title>
   </head>
   <body class="inner">
-    <header class="header">
+    <header class="header header-inner">
       <div class="container">
         <div class="header-top">
           <nav class="navbar">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link navbar-link" href="#">Магазины</a>
+                <a class="nav-link navbar-link link-show" href="#">Магазины</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navbar-link" href="#">Акции</a>
+                <a class="nav-link navbar-link link-show" href="#">Акции</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navbar-link" href="#">Доставка и оплата</a>
+                <a class="nav-link navbar-link link-show" href="#"
+                  >Доставка и оплата</a
+                >
               </li>
             </ul>
           </nav>
@@ -100,7 +106,291 @@
       </div>
     </div>
 
-    <footer class="footer">
+    <section class="catalog">
+      <div class="container">
+        <h1 class="catalog-title">Гидроциклы</h1>
+        <div class="catalog-sort">
+          <div class="catalog-sort-links">
+            <a href="#" class="catalog-sort-link">Полноприводные</a>
+            <a href="#" class="catalog-sort-link">от 5000</a>
+            <a href="#" class="catalog-sort-link">BRP</a>
+            <a href="#" class="catalog-sort-link">еще</a>
+          </div>
+
+          <div class="catalog-sort-views">
+            <select class="filter-style catalog-sort-select">
+              <option value="">По популярности</option>
+              <option value="">По марке</option>
+              <option value="">По цене</option>
+            </select>
+            <button class="catalog-sort-view catalog-sort-view-grid active">
+              <svg
+                width="23"
+                height="21"
+                viewBox="0 0 23 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="21"
+                  height="19"
+                  stroke="#2F3035"
+                  stroke-width="2"
+                />
+                <rect
+                  x="7"
+                  y="6"
+                  width="2"
+                  height="2"
+                  fill="#2F3035"
+                  stroke="#2F3035"
+                  stroke-width="2"
+                />
+                <rect
+                  x="7"
+                  y="13"
+                  width="2"
+                  height="2"
+                  fill="#2F3035"
+                  stroke="#2F3035"
+                  stroke-width="2"
+                />
+                <rect
+                  x="14"
+                  y="6"
+                  width="2"
+                  height="2"
+                  fill="#2F3035"
+                  stroke="#2F3035"
+                  stroke-width="2"
+                />
+                <rect
+                  x="14"
+                  y="13"
+                  width="2"
+                  height="2"
+                  fill="#2F3035"
+                  stroke="#2F3035"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button class="catalog-sort-view catalog-sort-view-line">
+              <svg
+                width="25"
+                height="19"
+                viewBox="0 0 25 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="1">
+                  <rect x="6" width="19" height="3" rx="1.5" fill="#2F3035" />
+                  <rect
+                    x="6"
+                    y="8"
+                    width="19"
+                    height="3"
+                    rx="1.5"
+                    fill="#2F3035"
+                  />
+                  <rect
+                    x="6"
+                    y="16"
+                    width="19"
+                    height="3"
+                    rx="1.5"
+                    fill="#2F3035"
+                  />
+                  <rect width="3" height="3" rx="1.5" fill="#2F3035" />
+                  <rect y="8" width="3" height="3" rx="1.5" fill="#2F3035" />
+                  <rect y="16" width="3" height="3" rx="1.5" fill="#2F3035" />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="catalog-inner">
+          <div class="catalog-filter">
+            <div class="tabs catalog-tabs">
+              <div class="tabs-wrapper catalog-tabs-wrapper">
+                <a
+                  href="#filter1"
+                  class="tabs-tab catalog-tabs-tab-link link-show active"
+                  >Параметры
+                </a>
+                <a
+                  href="#filter2"
+                  class="tabs-tab catalog-tabs-tab-link link-show"
+                  >По марке
+                </a>
+              </div>
+
+              <div class="tabs-container">
+                <div id="filter1" class="tabs-content catalog-filter-contents">
+                  <form class="catalog-filter-form">
+                    <ul class="catalog-filter-list">
+                      <li class="catalog-filter-item">
+                        <p class="catalog-filter-title catalog-filter-drop">
+                          Наличие
+                        </p>
+                        <div class="catalog-filter-content">
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input class="filter-style" type="checkbox" />В
+                              наличие</label
+                            >
+                          </div>
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input class="filter-style" type="checkbox" />Под
+                              заказ</label
+                            >
+                          </div>
+                        </div>
+                      </li>
+                      <li class="catalog-filter-item">
+                        <p class="catalog-filter-title catalog-filter-drop">
+                          Новинки
+                        </p>
+                        <div
+                          class="
+                            catalog-filter-content catalog-filter-content-radio
+                          "
+                        >
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input
+                                class="filter-style"
+                                type="radio"
+                                name="item"
+                              />Все</label
+                            >
+                          </div>
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input
+                                class="filter-style"
+                                type="radio"
+                                name="item"
+                              />Новинки</label
+                            >
+                          </div>
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input
+                                class="filter-style"
+                                type="radio"
+                                name="item"
+                              />Акции</label
+                            >
+                          </div>
+                        </div>
+                      </li>
+                      <li class="catalog-filter-item">
+                        <p class="catalog-filter-title catalog-filter-drop">
+                          Цена
+                        </p>
+                        <div class="catalog-filter-content">
+                          <input
+                            class="js-range-slider"
+                            type="text"
+                            name="range"
+                            value=""
+                            data-type="double"
+                          />
+                        </div>
+                      </li>
+                      <li class="catalog-filter-item-list">
+                        <div class="catalog-filter-item-inner-list">
+                          <p class="catalog-filter-item-inner-title">
+                            Мощность, л.с.
+                          </p>
+                          <select
+                            class="filter-style catalog-filter-item-select"
+                          >
+                            <option value="90">90</option>
+                            <option value="130">130</option>
+                            <option value="154">154</option>
+                            <option value="210">210</option>
+                          </select>
+                        </div>
+                      </li>
+                      <li class="catalog-filter-item-list">
+                        <div class="catalog-filter-item-inner-list">
+                          <p class="catalog-filter-item-inner-title">
+                            Мощность двигателя, л.с.
+                          </p>
+                          <select
+                            class="filter-style catalog-filter-item-select"
+                          >
+                            <option value="90">90</option>
+                            <option value="130">130</option>
+                            <option value="154">154</option>
+                            <option value="210">210</option>
+                          </select>
+                        </div>
+                      </li>
+                      <li class="catalog-filter-item-list">
+                        <div class="catalog-filter-item-inner-list">
+                          <p class="catalog-filter-item-inner-title">
+                            Макс. скорость
+                          </p>
+                          <select
+                            class="filter-style catalog-filter-item-select"
+                          >
+                            <option value="90">90</option>
+                            <option value="130">130</option>
+                            <option value="154">154</option>
+                            <option value="210">210</option>
+                          </select>
+                        </div>
+                      </li>
+                      <li class="catalog-filter-item">
+                        <p class="catalog-filter-title catalog-filter-drop">
+                          Бренд
+                        </p>
+                        <div class="catalog-filter-content">
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input
+                                class="filter-style"
+                                type="checkbox"
+                              />BRP</label
+                            >
+                          </div>
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input
+                                class="filter-style"
+                                type="checkbox"
+                              />Spark 2</label
+                            >
+                          </div>
+                          <div class="catalog-filter-content-wrapper">
+                            <label class="catalog-filter-label"
+                              ><input
+                                class="filter-style"
+                                type="checkbox"
+                              />Spark 3</label
+                            >
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer footer-inner">
       <div class="container">
         <div class="footer-top">
           <div class="footer-top-item footer-wrapper-form">
@@ -199,6 +489,9 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/jquery.rateyo.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
