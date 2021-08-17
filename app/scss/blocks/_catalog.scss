@@ -126,6 +126,65 @@
         }
       }
     }
+    &-more {
+      width: 100%;
+      &-button {
+        border: none;
+        padding: 0;
+        background: transparent;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration-line: underline;
+        color: $accent-color;
+        cursor: pointer;
+      }
+    }
+    &-model-search {
+      padding: 8px 20px;
+      border: 1px solid $range-color;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: $dark;
+      &::placeholder {
+        color: #bdbec2;
+        font-size: 12px;
+      }
+      &:focus {
+        outline: none;
+        border-color: $accent-color;
+      }
+    }
+    &-button {
+      padding: 17px 85px;
+      // position: relative;
+      // border: none;
+      // font-weight: 400;
+      // font-size: 15px;
+      // line-height: 18px;
+      // text-align: center;
+      // letter-spacing: 0.12em;
+      // text-transform: uppercase;
+      // color: $dark;
+      // background-color: $base;
+      // cursor: pointer;
+      // transition: 0.6s;
+      // z-index: 1;
+      // span {
+      //   content: "";
+      //   position: absolute;
+      //   height: 100%;
+      //   width: 0;
+      //   left: 0;
+      //   bottom: 0;
+      //   background-color: $accent-color;
+      //   transition: 0.5s;
+      //   overflow: hidden;
+      //   z-index: -1;
+      // }
+    }
   }
   &-tabs {
     &-tab-link {
@@ -149,7 +208,6 @@
       }
     }
   }
-
   .jq-checkbox,
   .jq-radio {
     margin-right: 8px;
@@ -224,6 +282,7 @@
   &-sort-views .jq-selectbox.focused .jq-selectbox__select {
     border: 1.5px solid #d7d9df;
   }
+
   .irs--flat {
     width: 100%;
     margin-top: -15px;
@@ -284,5 +343,50 @@
 
   .irs-max::before {
     content: "до";
+  }
+}
+
+.catalog-filter-button-filters {
+  .catalog-filter-content {
+    flex-wrap: nowrap;
+  }
+  .catalog-filter-content-wrapper {
+    width: auto;
+  }
+
+  .catalog-filter-label {
+    position: relative;
+    width: 63px;
+    height: 25px;
+  }
+  .catalog-filter-button-text {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-57%);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #c4c4c4;
+    z-index: 1;
+  }
+  .jq-checkbox.checked ~ .catalog-filter-button-text {
+    color: $light;
+  }
+  .jq-checkbox {
+    width: 63px;
+    height: 25px;
+    background-color: #f0f0f4;
+    border: none;
+  }
+
+  .jq-checkbox.checked {
+    background-color: $accent;
+    color: $light;
+  }
+  .jq-checkbox.checked .jq-checkbox__div {
+    display: none;
   }
 }
